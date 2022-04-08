@@ -15,3 +15,7 @@ jobs:
             cordova build --no-telemetry && \
             cp "$(find . -name '*.apk')" . && \
             ls -Al
+      - uses: actions/upload-artifact@v3
+        with:
+          name: app.apk
+          path: ./app-debug.apk
